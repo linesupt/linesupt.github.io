@@ -2,102 +2,378 @@
 <html lang="zh-hans">
 <head>
     <meta charset="utf-8">
-    <meta name="keyword" content="计算器,科学计算器,单位换算,单位转换,亲戚计算,尺子,水平仪,单位转换器,自由公式,日期计算,体重指数,数据统计,理财计算,分贝计,数学,作业,进制转换,卡路里,汇率,长度,面积,时间,重量">
-    <title>小方程</title>
+    <meta name="keyword" content="氢能源,氢能展会,氢能产业,燃料电池,氢能博览会,氢能源展会,重庆博瑞特会展">
+    <meta name="description" content="聚焦氢能源全产业链的专业博览会，汇聚全球氢能企业与专业观众，推动氢能产业绿色低碳发展。由重庆博瑞特会展有限公司主办/承办。">
+    <title>氢能源产业博览会</title>
     <link href="favicon.ico" type="image/x-icon" rel="icon"/>
     <link href="default.css" type="text/css" rel="stylesheet"/>
+    <link href="hydrogen.css" type="text/css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
-<body style="margin: 0px;">
-<div style="margin-left: 10%; margin-right: 10%">
-<br/><br/>
-<b><span>一、企业简介</span></b>
-<p>
-小方程科技是一家专注于移动互联网应用程序开发的软件开发企业。拥有一支十年以上经验丰富开发人员和工程师组成的团队，为各行各业的客户量身定制应用程序，提供一站式的解决方案。
-</p>
-<b><span>二、产品特点</span></b>
-<p>
-<span>
-1.丰富的开发经验：团队组建以来，已经成功开发了数十款应用程序，涵盖了教育、医疗、金融、电商、娱乐等多个领域。丰富的开发经验使得在解决各种技术难题时游刃有余。
-</span><br/>
-</p>
-<p>
-<span>
-2.先进的技术架构：我们采用敏捷开发流程和微服务架构，确保应用程序的开发质量和效率。同时不断关注新兴技术，将最新的技术成果应用到产品中。
-</span><br/>
-</p>
-<p>
-<span>
-3.用户体验至上：我们始终坚持“用户体验至上”的原则，注重用户需求和反馈。从应用程序的界面设计到功能实现，我们都倾注了极大的心血，力求打造出最符合用户需求的产品。
-</span><br/>
-</p>
-<p>
-<span>
-4.强大的运营支持：除了提供优质的技术服务，我们还为客户提供全方位的运营支持。包括市场调研、推广方案制定、数据分析等，帮助客户实现商业价值最大化。
-</span><br/>
-</p>
+<body>
 
-<br/><br/><br/>
-<div align="center">
-    <b><h4>产品介绍</h4></b>
-</div>
-
-<br/><br/>
-
-<div style="display: flex">
-    <div align="center" style="width: 50%;">
-        <a href="calc/mathcalc.html" style="font-size:18px;">
-            <img src="calc/image/icon.png" style="width: 150px; height: 150px;" alt="MathCalc"/>
+<!-- ==================== 导航栏 ==================== -->
+<nav id="nav">
+    <div class="nav-inner">
+        <a class="nav-brand" href="#home">
+            <span class="brand-badge">氢</span>
+            <span>氢能源产业博览会</span>
         </a>
-        <span style="width:100%; text-align: center; display: inline-block">
-	        <a href="calc/mathcalc.html">千维计算器</a>
-	    </span><br/><br/>
-        <span style="width:100%; text-align: center; display: inline-block">
-	        科学函数、自由公式、单位换算
-	    </span>
-        <span style="width:100%; text-align: center; display: inline-block">
-	        屏幕尺子、亲戚称呼...
-	    </span>
-        <br/><br/>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">展会介绍</a></li>
+            <li><a href="#exhibitor">参展招商</a></li>
+            <li><a href="#visitor">观众服务</a></li>
+            <li><a href="software.html">软件产品</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="#exhibitor" class="nav-cta">参展报名</a></li>
+        </ul>
     </div>
+</nav>
 
-    <div align="center" style="width: 50%;">
-        <a href="code/scancode.html" style="font-size:18px;">
-            <img src="code/image/icon.png" style="width: 150px; height: 150px;" alt="ScanCode"/>
-        </a>
-        <span style="width:100%; text-align: center; display: inline-block">
-		<a href="code/scancode.html">简码</a>
-	    </span><br/><br/>
-        <span style="width:100%; text-align: center; display: inline-block">
-	        二维码/条形码、扫码枪、连续扫码
-	    </span>
-        <span style="width:100%; text-align: center; display: inline-block">
-	        二维码批量制作...
-	    </span>
+<!-- ==================== Hero 主视觉 ==================== -->
+<header id="home">
+    <div class="hero-content">
+        <span class="hero-tag">绿色能源 · 氢启未来</span>
+        <h1 class="hero-title">中国国际氢能源产业博览会</h1>
+        <p class="hero-sub">
+            汇聚全球氢能全产业链企业与专业观众，聚焦制氢、储运、加注与燃料电池应用，共建氢能产业绿色低碳发展生态。
+        </p>
+        <div class="hero-meta">
+            <span class="meta-item">📅 2026年10月（占位）</span>
+            <span class="meta-item">📍 中国 · 重庆（占位）</span>
+            <span class="meta-item">🏷️ 第3届</span>
+        </div>
+        <div class="hero-actions">
+            <a href="#exhibitor" class="btn btn-primary">参展报名</a>
+            <a href="#visitor" class="btn btn-outline">观众注册</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-num">500+</div>
+                <div class="stat-label">参展企业</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">30,000m²</div>
+                <div class="stat-label">展示面积</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">50,000+</div>
+                <div class="stat-label">专业观众</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">20+</div>
+                <div class="stat-label">覆盖国家</div>
+            </div>
+        </div>
     </div>
-</div>
+</header>
 
-<br/><br/>
-
-<br/>
-
-</div>
-<div id="gen_bottom" style="height: 100px; position: relative; margin: 0px; background: #202329;">
-    <div style="position: absolute; bottom: 10px; width: 100%;">
-        <span style="font-size: 12px; color: gray">小方程科技 © 版权所有</span>
-        <span style="font-size: 12px;"> | </span>
-		<a href="contact.html">
-            <span style="text-decoration: underline gray; color: gray; font-size: 12px;">联系我们</span></a>
-        <br/>
-        <img src="ic_pub_security.png" alt="" style="width: 15px; height: 15px; vertical-align: bottom; margin-bottom: 2px" />
-        <a href="https://beian.mps.gov.cn" target="_blank">
-            <span style="text-decoration: underline gray; color: gray; font-size: 12px;">渝公网安备50011602501084号</span>
-        </a>
-        <span style="font-size: 12px;"> | </span>
-        <a href="https://beian.miit.gov.cn/" target="_blank">
-            <span style="text-decoration: underline gray; color: gray; font-size: 12px;">渝ICP备2023013867号</span>
-        </a>
+<!-- ==================== 展会介绍 ==================== -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">About</span>
+            <h2>展会介绍</h2>
+            <p>深耕氢能产业，连接全球资源，助力氢能全产业链高质量发展。</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-visual">
+                <div class="visual-box">氢能源展会主视觉占位图<br/>（后续替换为真实素材）</div>
+            </div>
+            <div class="about-text">
+                <h3>聚焦氢能 · 链接产业</h3>
+                <p>
+                    中国国际氢能源产业博览会是面向氢能源全产业链的专业交流合作平台，涵盖制氢、储氢、运氢、加氢及燃料电池汽车、氢能装备、智慧能源等核心领域。
+                </p>
+                <p>
+                    展会致力于为氢能企业、科研机构、政府部门与投资机构搭建高效对接桥梁，推动技术创新与产业落地，助力实现"双碳"目标。
+                </p>
+                <ul>
+                    <li>覆盖氢能全产业链核心环节</li>
+                    <li>汇聚头部企业、科研院所与行业专家</li>
+                    <li>同期举办高峰论坛、技术研讨与商务对接</li>
+                    <li>打造产业招商、资本合作的精准平台</li>
+                </ul>
+            </div>
+        </div>
+        <div class="recap-row">
+            <div class="recap-card">
+                <div class="recap-img">历届回顾图（占位）</div>
+                <div class="recap-body">
+                    <h4>第一届 · 启航</h4>
+                    <p>首届展会成功举办，吸引国内外上百家氢能企业参展，开启氢能产业交流新篇章。</p>
+                </div>
+            </div>
+            <div class="recap-card">
+                <div class="recap-img">历届回顾图（占位）</div>
+                <div class="recap-body">
+                    <h4>第二届 · 聚力</h4>
+                    <p>规模与影响力持续提升，汇聚更多产业链上下游企业，同期举办多场专业论坛。</p>
+                </div>
+            </div>
+            <div class="recap-card">
+                <div class="recap-img">历届回顾图（占位）</div>
+                <div class="recap-body">
+                    <h4>第三届 · 未来</h4>
+                    <p>全新升级，聚焦氢能商业化应用与产业投资，共建绿色低碳未来。</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
+
+<!-- ==================== 参展招商 ==================== -->
+<section id="exhibitor" class="section alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">Exhibitor</span>
+            <h2>参展招商</h2>
+            <p>多种合作方式，为参展企业与合作伙伴提供全方位服务。</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></svg>
+                </div>
+                <h3>展位预订</h3>
+                <p>提供标准展位与特装展位，支持个性化定制，打造品牌专属展示空间。</p>
+                <a class="learn-more" href="#exhibitor">了解详情 →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                </div>
+                <h3>参展商服务</h3>
+                <p>展前、展中、展后一站式服务，涵盖搭建、物流、接待与宣传推广。</p>
+                <a class="learn-more" href="#exhibitor">了解详情 →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+                </div>
+                <h3>展区划分</h3>
+                <p>科学规划制氢、储运、加注、燃料电池应用等主题展区，精准对接目标客群。</p>
+                <a class="learn-more" href="#exhibitor">了解详情 →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l10 7-10 7L2 9z"/><path d="M2 17l10 7 10-7"/></svg>
+                </div>
+                <h3>招商合作</h3>
+                <p>诚邀赞助商、合作媒体与产业园区联合共建，共享展会品牌价值。</p>
+                <a class="learn-more" href="#exhibitor">了解详情 →</a>
+            </div>
+        </div>
+        <div class="cta-banner">
+            <div>
+                <h3>成为我们的参展伙伴</h3>
+                <p>获取展位图、参展手册与招商方案，欢迎来电咨询。</p>
+            </div>
+            <a href="contact.html" class="btn btn-primary">咨询招商热线</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 观众服务 ==================== -->
+<section id="visitor" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">Visitor</span>
+            <h2>观众服务</h2>
+            <p>注册观展，一站式获取观展指引、票务与参观须知。</p>
+        </div>
+        <div class="visitor-grid">
+            <div class="visitor-cards">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h3>观众注册</h3>
+                    <p>在线免费注册，获取参观二维码，便捷入场观展。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3>观展指引</h3>
+                    <p>交通路线、入场流程、展馆分布等观展攻略，助您高效观展。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                    </div>
+                    <h3>票务服务</h3>
+                    <p>支持门票申领、实名核验与电子票务，简化入场流程。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    </div>
+                    <h3>参观须知</h3>
+                    <p>了解防疫、安检、现场秩序等注意事项，保障安全有序观展。</p>
+                </div>
+            </div>
+            <div class="register-box">
+                <h3>观众预约注册</h3>
+                <p>填写信息即可预约参观，展会期间凭二维码入场。</p>
+                <form onsubmit="alert('预约提交成功（演示占位）'); return false;">
+                    <div class="form-group">
+                        <label for="v-name">姓名</label>
+                        <input id="v-name" type="text" placeholder="请输入姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="v-phone">联系方式</label>
+                        <input id="v-phone" type="tel" placeholder="请输入手机号" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="v-date">预约参观日期</label>
+                        <select id="v-date">
+                            <option>展会第一天</option>
+                            <option>展会第二天</option>
+                            <option>展会第三天</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form-submit">提交预约</button>
+                    <p class="form-tip">* 演示占位表单，实际功能后续接入</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 品牌形象 ==================== -->
+<section id="brand" class="section alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="kicker">Brand</span>
+            <h2>关于我们</h2>
+            <p>主办/承办单位：重庆博瑞特会展有限公司</p>
+        </div>
+        <div class="brand-grid">
+            <div class="brand-text">
+                <h3>重庆博瑞特会展有限公司</h3>
+                <p>
+                    重庆博瑞特会展有限公司是一家专业从事大型展会策划、组织、运营与会务服务的会展企业，深耕会展行业多年，在产业博览会、行业峰会等领域拥有丰富的办展经验。
+                </p>
+                <p>
+                    公司秉承"专业办展、服务产业"的理念，致力于为氢能及新能源产业搭建高效、专业、国际化的交流合作平台，助力区域产业升级与绿色低碳发展。
+                </p>
+            </div>
+            <div class="brand-cards">
+                <div class="brand-card">
+                    <div class="brand-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h4>专业办展经验</h4>
+                    <p>多年会展行业深耕，成熟的活动策划与现场运营体系。</p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg>
+                    </div>
+                    <h4>深耕氢能产业</h4>
+                    <p>聚焦氢能全产业链，链接产业资源与市场需求。</p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <h4>绿色低碳理念</h4>
+                    <p>践行绿色办展，助力"双碳"目标与能源转型。</p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                    </div>
+                    <h4>国际化视野</h4>
+                    <p>对接国际氢能组织与跨国企业，拓展全球合作网络。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 软件产品入口（次要业务） ==================== -->
+<section id="software" class="section">
+    <div class="container">
+        <div class="cta-banner">
+            <div>
+                <h3>软件产品与服务</h3>
+                <p>千维计算器、简码、千影等实用软件应用，欢迎前往软件产品专区了解详情。</p>
+            </div>
+            <a href="software.html" class="btn btn-primary">前往软件产品专区 →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 页脚 ==================== -->
+<footer id="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-name">氢能源产业博览会</div>
+                <p>聚焦氢能全产业链的专业博览会，共建绿色低碳未来。</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>展会导航</h4>
+                    <a href="#about">展会介绍</a>
+                    <a href="#exhibitor">参展招商</a>
+                    <a href="#visitor">观众服务</a>
+                    <a href="#brand">关于我们</a>
+                </div>
+                <div class="footer-col">
+                    <h4>软件产品</h4>
+                    <a href="software.html">软件产品专区</a>
+                    <a href="calc/mathcalc.html">千维计算器</a>
+                    <a href="code/scancode.html">简码</a>
+                    <a href="video/linevideo.html">千影</a>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <a href="contact.html">联系我们</a>
+                    <a href="contact.html">业务合作</a>
+                    <a href="contact.html">客服支持</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="links">
+                <span>重庆博瑞特会展有限公司 © 版权所有</span>
+                <span>|</span>
+                <a href="contact.html">联系我们</a>
+                <span>|</span>
+                <img src="ic_pub_security.png" alt="" class="pub-icon" />
+                <a href="https://beian.mps.gov.cn" target="_blank">渝公网安备50011602501084号</a>
+                <span>|</span>
+                <a href="https://beian.miit.gov.cn/" target="_blank">渝ICP备2023013867号</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 移动端导航菜单开关
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('navMenu');
+    if (toggle) {
+        toggle.addEventListener('click', function () {
+            toggle.classList.toggle('open');
+            menu.classList.toggle('open');
+        });
+    }
+    // 点击菜单项后关闭移动端菜单
+    menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            toggle.classList.remove('open');
+            menu.classList.remove('open');
+        });
+    });
+</script>
+
 </body>
 </html>
