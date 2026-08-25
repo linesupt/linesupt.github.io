@@ -1,0 +1,44 @@
+# ============================================================
+# nginx-ssl.conf.example
+# lineying.cn HTTPS 配置示例
+#
+# 使用方法：
+#   1. 将本文件内容放入站点 server 配置块中
+#   2. 将证书路径替换为实际路径（acme.sh 安装目录 /etc/nginx/ssl/）
+#   3. 重载 Nginx：systemctl reload nginx
+# ============================================================
+
+# HTTP 80 -> HTTPS 443 强制跳转（可选，建议启用）
+server {
+    listen 80;
+    server_name lineying.cn www.lineying.cn;
+    return 301 https://$host$request_uri;
+}
+
+# HTTPS 主配置
+server {
+    listen 443 ssl http2;
+    server_name lineying.cn www.lineying.cn;
+
+    # === 证书配置（由 acme.sh 自动管理，路径固定）===
+    ssl_certificate     /etc/nginx/ssl/lineying.cn.pem;      # 完整证书链（含中间证书）
+    ssl_certificate_key /etc/nginx/ssl/lineying.cn.key;      # 私钥
+
+    # === 安全与性能优化（推荐）===
+    ssl_protocols       TLSv1.2 TLSv1.3;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers on;
+    ssl_session_cache   shared:SSL:10m;
+    ssl_session_timeout 10m;
+
+    # === 站点根目录 ===
+    root /var/www/linecloud;          # 请改为你的网站实际根目录
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # 可选：HSTS 强制 HTTPS
+    # add_header Strict-Transport-Security "max-age=31536000" always;
+}
